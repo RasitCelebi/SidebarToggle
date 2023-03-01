@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#f1f5f8]">
+
+    <div>
+        <div class="fixed top-6 right-6 text-[40px] 
+        cursor-pointer ">
+            <ion-icon class="" name="menu-outline" onclick="Open(this)"></ion-icon>
+        </div>
+    </div>
+
+    <div class="fixed bg-[#002626] w-0 h-[100%]
+         text-white flex justify-center items-center
+          text-[40px] tracking-[1px] overflow-hidden
+           origin-left duration-500" id="sideBar">
+        <ul>
+            <li><a href="#"></a>Home</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+
+        <div class="absolute top-8 right-8 text-[40px]
+        cursor-pointer">
+            <ion-icon name="close-outline" onclick="Close(this)"></ion-icon>
+        </div>
+
+
+
+    </div>
+
+    <script>
+
+        let sideBar = document.querySelector("#sideBar");
+        function Open() {
+            
+            sideBar.classList.toggle('w-96');
+            console.log("Hi")
+        };
+
+        function Close() {
+            sideBar.classList.toggle('w-96');
+        };
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
