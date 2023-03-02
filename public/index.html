@@ -5,33 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/variables.css" rel="stylesheet">
 </head>
 
 <body class="bg-[#f1f5f8]">
 
+
     <div>
         <div class="fixed top-6 right-6 text-[40px] 
         cursor-pointer ">
-            <ion-icon class="" name="menu-outline" onclick="Open(this)"></ion-icon>
+            <ion-icon color="primary" name="menu-outline" onclick="actionType(this)"></ion-icon>
         </div>
     </div>
 
-    <div class="fixed bg-[#002626] w-0 h-[100%]
-         text-white flex justify-center items-center
-          text-[40px] tracking-[1px] overflow-hidden
+    <div class="fixed bg-white w-0 h-[100%] 
+         text-[#687b93] flex justify-start items-start
+          text-[23px] tracking-[1px] overflow-hidden
            origin-left duration-500" id="sideBar">
-        <ul>
-            <li><a href="#"></a>Home</li>
-            <li>About</li>
-            <li>Projects</li>
+
+        <div class="absolute top-8 right-8 text-[30px]
+        cursor-pointer">
+                <ion-icon color="close-color" name="close-outline" onclick="actionType(this)"></ion-icon>
+            </div>
+
+        <ul class="mt-20 ml-7">
+            <li class="mb-5"><a href="#"></a>Home</li>
+            <li class="mb-5">About</li>
+            <li class="mb-5">Projects</li>
             <li>Contact</li>
         </ul>
 
-        <div class="absolute top-8 right-8 text-[40px]
-        cursor-pointer">
-            <ion-icon name="close-outline" onclick="Close(this)"></ion-icon>
-        </div>
+        <div class="flex left-[80px] absolute bottom-0 ">
+            <div>
+                <ion-icon class="h-6 w-6 mr-2" color="logo-color" name="logo-facebook"></ion-icon>
+            </div>
 
+            <div>
+                <ion-icon class="h-6 w-6 mr-2" color="logo-color" name="logo-twitter"></ion-icon>
+            </div>
+
+            <div>
+                <ion-icon class="h-6 w-6 mr-2" color="logo-color" name="logo-behance"></ion-icon>
+            </div>
+
+            <div>
+                <ion-icon class="h-6 w-6 mr-2" color="logo-color" name="logo-linkedin"></ion-icon>
+            </div>
+
+            <div>
+                <ion-icon class="h-6 w-6" color="logo-color" name="diamond-outline"></ion-icon>
+            </div>
+
+        </div>
 
 
     </div>
@@ -39,14 +64,10 @@
     <script>
 
         let sideBar = document.querySelector("#sideBar");
-        function Open() {
-            
-            sideBar.classList.toggle('w-96');
-            console.log("Hi")
-        };
+        function actionType() {
 
-        function Close() {
             sideBar.classList.toggle('w-96');
+
         };
 
     </script>
